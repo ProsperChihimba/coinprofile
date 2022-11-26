@@ -1,4 +1,5 @@
 import 'package:coinprofile/screens/bottom_bar.dart';
+import 'package:coinprofile/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Coinprofile app',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Styles.blackColor,
       ),
       home: const BottomBar(),
     );
