@@ -1,6 +1,7 @@
 import 'package:coinprofile/utils/app_layout.dart';
 import 'package:coinprofile/utils/app_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -18,38 +19,77 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(17)),
-            child: Column(
-              children: [
-                // App header
-                Padding(
-                  padding:
-                      EdgeInsets.symmetric(vertical: AppLayout.getHeight(17)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                width: 1.4, color: Styles.blackColor),
-                            borderRadius:
-                                BorderRadius.circular(AppLayout.getWidth(20))),
-                        child: ClipRRect(
-                          borderRadius:
-                              BorderRadius.circular(AppLayout.getWidth(20)),
-                          child: Image(
-                            image: const AssetImage("assets/proc.jpeg"),
-                            height: AppLayout.getHeight(35),
-                            width: AppLayout.getWidth(35),
-                          ),
-                        ),
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(17)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(),
+                  Container(
+                    decoration: BoxDecoration(
+                        border:
+                            Border.all(width: 1.4, color: Styles.blackColor),
+                        borderRadius:
+                            BorderRadius.circular(AppLayout.getWidth(20))),
+                    child: ClipRRect(
+                      borderRadius:
+                          BorderRadius.circular(AppLayout.getWidth(20)),
+                      child: Image(
+                        image: const AssetImage("assets/proc.jpeg"),
+                        height: AppLayout.getHeight(35),
+                        width: AppLayout.getWidth(35),
                       ),
-                    ],
+                    ),
                   ),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: AppLayout.getWidth(17),
+                vertical: AppLayout.getHeight(10)),
+            child: Text(
+              "Welcome! 👋🏽",
+              style: Styles.headerText,
+            ),
+          ),
+          // user balance section
+          Gap(AppLayout.getHeight(30)),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: AppLayout.getWidth(17),
+            ),
+            child: Row(
+              children: [
+                Text(
+                  "NGN ",
+                  style: Styles.headerText
+                      .copyWith(color: Colors.grey.shade400, fontSize: 20),
                 ),
-
-                // Welcome message
+                Text(
+                  "0",
+                  style: Styles.headerText.copyWith(fontSize: 35),
+                ),
+                Text(
+                  ".00",
+                  style: Styles.headerText
+                      .copyWith(color: Colors.grey.shade400, fontSize: 20),
+                )
               ],
+            ),
+          ),
+
+          Gap(AppLayout.getHeight(18)),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: AppLayout.getWidth(17),
+            ),
+            child: Text(
+              "Estimated Total balance in ",
+              style: Styles.normalText.copyWith(
+                color: Colors.grey.shade400,
+              ),
             ),
           )
         ],

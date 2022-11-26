@@ -13,16 +13,16 @@ class Styles {
   // Basic app text styles
   static TextStyle normalText = GoogleFonts.montserrat(
       fontSize: AppLayout.getWidth(14),
-      fontWeight: FontWeight.w500,
-      color: primaryColor);
+      // fontWeight: FontWeight.w400,
+      color: blackColor);
 
-  static TextStyle headerText = GoogleFonts.montserrat(
+  static TextStyle headerText = GoogleFonts.poppins(
       fontSize: AppLayout.getWidth(18),
       fontWeight: FontWeight.w500,
-      color: primaryColor);
+      color: blackColor);
 
   static TextStyle headerTextTwo = GoogleFonts.montserrat(
       fontSize: AppLayout.getWidth(16),
       fontWeight: FontWeight.w500,
-      color: primaryColor);
+      color: blackColor);
 }
