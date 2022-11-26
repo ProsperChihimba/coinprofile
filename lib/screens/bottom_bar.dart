@@ -35,8 +35,8 @@ class _BottomBarState extends State<BottomBar> {
         onTap: _onItemTapped,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedItemColor: Colors.blueGrey,
-        unselectedItemColor: const Color(0xFF526480),
+        selectedItemColor: Colors.grey.shade900,
+        unselectedItemColor: Colors.grey.shade500,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
@@ -44,12 +44,12 @@ class _BottomBarState extends State<BottomBar> {
             activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_balance_wallet_rounded),
+            icon: Icon(Icons.account_balance_wallet_outlined),
             label: "Balances",
             activeIcon: Icon(Icons.account_balance_wallet_rounded),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.credit_card_rounded),
+            icon: Icon(Icons.credit_card_outlined),
             label: "Cards",
             activeIcon: Icon(Icons.credit_card_rounded),
           ),
