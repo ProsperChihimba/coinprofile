@@ -221,9 +221,49 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 Container(
+                  margin: EdgeInsets.only(right: AppLayout.getHeight(16)),
                   width: size.width * 0.75,
                   height: AppLayout.getHeight(170),
-                  decoration: BoxDecoration(color: Colors.yellow),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: AppLayout.getWidth(15),
+                    vertical: AppLayout.getHeight(15),
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade200,
+                    borderRadius: BorderRadius.circular(AppLayout.getHeight(6)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Earn up to 5% interest 💰",
+                        style: Styles.headerText,
+                      ),
+                      Gap(AppLayout.getHeight(15)),
+                      Text(
+                        "Earn interest on your USD balance, paid weekly.",
+                        style: Styles.normalText.copyWith(
+                            fontSize: AppLayout.getHeight(14),
+                            color: Colors.grey.shade600),
+                      ),
+                      Gap(AppLayout.getHeight(15)),
+                      Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: AppLayout.getWidth(10),
+                          vertical: AppLayout.getHeight(5),
+                        ),
+                        decoration: BoxDecoration(
+                            color: Styles.blackColor,
+                            borderRadius:
+                                BorderRadius.circular(AppLayout.getWidth(40))),
+                        child: Text(
+                          "Coming soon",
+                          style:
+                              Styles.normalText.copyWith(color: Colors.white),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),
