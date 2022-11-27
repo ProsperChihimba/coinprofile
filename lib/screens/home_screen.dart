@@ -265,6 +265,38 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
+                Container(
+                  margin: EdgeInsets.only(right: AppLayout.getHeight(16)),
+                  width: size.width * 0.75,
+                  height: AppLayout.getHeight(170),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: AppLayout.getWidth(15),
+                    vertical: AppLayout.getHeight(15),
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.transparent,
+                    borderRadius: BorderRadius.circular(AppLayout.getHeight(6)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "We’re constantly improving our product, so we always appreciate any feedback you might have",
+                        style: Styles.normalText.copyWith(
+                            fontSize: AppLayout.getHeight(14),
+                            color: Colors.grey.shade600),
+                      ),
+                      Gap(AppLayout.getHeight(20)),
+                      Text(
+                        "Suggest a feature",
+                        style: Styles.headerText.copyWith(
+                          fontSize: AppLayout.getHeight(16),
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           )
