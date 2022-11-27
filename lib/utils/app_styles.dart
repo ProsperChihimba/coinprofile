@@ -11,7 +11,7 @@ class Styles {
   static Color grayColor = const Color(0xFFe4f2dc);
 
   // Basic app text styles
-  static TextStyle normalText = GoogleFonts.montserrat(
+  static TextStyle normalText = GoogleFonts.poppins(
       fontSize: AppLayout.getWidth(14),
       // fontWeight: FontWeight.w400,
       color: blackColor);
@@ -21,7 +21,7 @@ class Styles {
       fontWeight: FontWeight.w500,
       color: blackColor);
 
-  static TextStyle headerTextTwo = GoogleFonts.montserrat(
+  static TextStyle headerTextTwo = GoogleFonts.poppins(
       fontSize: AppLayout.getWidth(16),
       fontWeight: FontWeight.w500,
       color: blackColor);

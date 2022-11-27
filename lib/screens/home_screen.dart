@@ -14,6 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final size = AppLayout.getSize(context);
     return Scaffold(
       backgroundColor: Colors.white,
       body: ListView(
@@ -172,6 +173,61 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
+
+          // Customer refers
+          Gap(AppLayout.getHeight(15)),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.symmetric(
+              horizontal: AppLayout.getWidth(17),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(right: AppLayout.getHeight(16)),
+                  width: size.width * 0.75,
+                  height: AppLayout.getHeight(170),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: AppLayout.getWidth(15),
+                    vertical: AppLayout.getHeight(15),
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade200,
+                    borderRadius: BorderRadius.circular(AppLayout.getHeight(6)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Refer & earn \$4 💸",
+                        style: Styles.headerText,
+                      ),
+                      Gap(AppLayout.getHeight(15)),
+                      Text(
+                        "You’ll both get \$2 when your friend does a transaction of \$20 and above.",
+                        style: Styles.normalText.copyWith(
+                            fontSize: AppLayout.getHeight(14),
+                            color: Colors.grey.shade600),
+                      ),
+                      Gap(AppLayout.getHeight(15)),
+                      Text(
+                        "Get referral link",
+                        style: Styles.headerText.copyWith(
+                          fontSize: AppLayout.getHeight(16),
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  width: size.width * 0.75,
+                  height: AppLayout.getHeight(170),
+                  decoration: BoxDecoration(color: Colors.yellow),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
