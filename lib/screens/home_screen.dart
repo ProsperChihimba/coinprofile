@@ -299,7 +299,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-          )
+          ),
+          Gap(AppLayout.getHeight(65)),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: AppLayout.getWidth(17),
+            ),
+            child: Text(
+              "Here’s what you’ve been up to",
+              style: Styles.normalText.copyWith(
+                color: Colors.grey.shade400,
+              ),
+            ),
+          ),
         ],
       ),
     );
