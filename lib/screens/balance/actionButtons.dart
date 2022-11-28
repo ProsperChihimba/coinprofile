@@ -102,17 +102,49 @@ class _ActionButtonsState extends State<ActionButtons> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Transform.rotate(
-                  angle: -0.8,
-                  child: Icon(
-                    FluentSystemIcons.ic_fluent_send_regular,
-                    size: AppLayout.getHeight(18),
-                    color: Colors.grey.shade500,
-                  ),
+                Icon(
+                  FluentSystemIcons.ic_fluent_arrow_reply_filled,
+                  size: AppLayout.getHeight(18),
+                  color: Colors.grey.shade500,
                 ),
                 Gap(AppLayout.getWidth(10)),
                 Text(
                   "Withdraw",
+                  style:
+                      Styles.normalText.copyWith(color: Colors.grey.shade500),
+                ),
+              ],
+            ),
+          ),
+        ),
+
+        // convert button
+        Gap(AppLayout.getHeight(10)),
+        Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: AppLayout.getWidth(17),
+          ),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                side: BorderSide(
+                  width: AppLayout.getWidth(1),
+                  color: Colors.grey.shade500,
+                ),
+                backgroundColor: Colors.white,
+                padding:
+                    EdgeInsets.symmetric(vertical: AppLayout.getHeight(11))),
+            onPressed: (() {}),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  FluentSystemIcons.ic_fluent_arrow_sync_filled,
+                  size: AppLayout.getHeight(18),
+                  color: Colors.grey.shade500,
+                ),
+                Gap(AppLayout.getWidth(10)),
+                Text(
+                  "Convert",
                   style:
                       Styles.normalText.copyWith(color: Colors.grey.shade500),
                 ),
