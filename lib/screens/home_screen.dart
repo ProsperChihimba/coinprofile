@@ -360,6 +360,21 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
+
+          Gap(AppLayout.getHeight(25)),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: AppLayout.getWidth(17),
+            ),
+            child: Text(
+              "See all",
+              style: Styles.headerText.copyWith(
+                fontSize: AppLayout.getHeight(16),
+                decoration: TextDecoration.underline,
+              ),
+            ),
+          ),
+          Gap(AppLayout.getHeight(40)),
         ],
       ),
     );
