@@ -1,4 +1,5 @@
-import 'package:coinprofile/screens/home/home_screen.dart';
+import 'package:coinprofile/screens/balance/index.dart';
+import 'package:coinprofile/screens/home/index.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class _BottomBarState extends State<BottomBar> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    const Text("Balances"),
+    const BalanceScreen(),
     const Text("Cards"),
     const Text("Settings"),
   ];
