@@ -1,4 +1,5 @@
 import 'package:coinprofile/screens/balance/actionButtons.dart';
+import 'package:coinprofile/screens/balance/transactions.dart';
 import 'package:coinprofile/screens/parts/balance.dart';
 import 'package:coinprofile/utils/app_layout.dart';
 import 'package:coinprofile/utils/app_styles.dart';
@@ -54,7 +55,24 @@ class _BalanceScreenState extends State<BalanceScreen> {
 
             // Actions buttons
             Gap(AppLayout.getHeight(20)),
-            const ActionButtons()
+            const ActionButtons(),
+
+            // Transactions title
+            Gap(AppLayout.getHeight(70)),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: AppLayout.getWidth(17),
+              ),
+              child: Text(
+                "Transactions",
+                style: Styles.normalText.copyWith(
+                  color: Colors.grey.shade600,
+                ),
+              ),
+            ),
+
+            Gap(AppLayout.getHeight(20)),
+            const TransactionsSection()
           ],
         ),
       ),
