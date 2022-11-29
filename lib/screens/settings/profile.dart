@@ -13,53 +13,70 @@ class ProfileSection extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         horizontal: AppLayout.getWidth(17),
       ),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // User image
-          Container(
-            decoration: BoxDecoration(
-                border: Border.all(width: 1.4, color: Styles.blackColor),
-                borderRadius: BorderRadius.circular(AppLayout.getWidth(35))),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(AppLayout.getWidth(35)),
-              child: Image(
-                image: const AssetImage("assets/proc.jpeg"),
-                height: AppLayout.getHeight(55),
-                width: AppLayout.getWidth(55),
+          Row(
+            children: [
+              // User image
+              Container(
+                decoration: BoxDecoration(
+                    border: Border.all(width: 1.4, color: Styles.blackColor),
+                    borderRadius:
+                        BorderRadius.circular(AppLayout.getWidth(35))),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(AppLayout.getWidth(35)),
+                  child: Image(
+                    image: const AssetImage("assets/proc.jpeg"),
+                    height: AppLayout.getHeight(55),
+                    width: AppLayout.getWidth(55),
+                  ),
+                ),
+              ),
+
+              Gap(AppLayout.getWidth(25)),
+              // username
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "@prosperabsalom",
+                    style: Styles.headerText.copyWith(
+                      fontSize: AppLayout.getHeight(21),
+                    ),
+                  ),
+                  Gap(AppLayout.getHeight(2)),
+                  Row(
+                    children: [
+                      Text(
+                        "coinprofile.me/@prosperabsalom",
+                        style: Styles.headerText.copyWith(
+                          fontSize: AppLayout.getHeight(12.5),
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                      Gap(AppLayout.getWidth(5)),
+                      Icon(
+                        FluentSystemIcons.ic_fluent_copy_regular,
+                        size: AppLayout.getHeight(15),
+                      ),
+                    ],
+                  ),
+                ],
+              )
+            ],
+          ),
+          Gap(AppLayout.getHeight(15)),
+          Padding(
+            padding: EdgeInsets.only(left: AppLayout.getWidth(15)),
+            child: Text(
+              "Edit",
+              style: Styles.headerText.copyWith(
+                fontSize: AppLayout.getHeight(15),
+                decoration: TextDecoration.underline,
               ),
             ),
           ),
-
-          Gap(AppLayout.getWidth(25)),
-          // username
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "@prosperabsalom",
-                style: Styles.headerText.copyWith(
-                  fontSize: AppLayout.getHeight(21),
-                ),
-              ),
-              Gap(AppLayout.getHeight(2)),
-              Row(
-                children: [
-                  Text(
-                    "coinprofile.me/@prosperabsalom",
-                    style: Styles.headerText.copyWith(
-                      fontSize: AppLayout.getHeight(12.5),
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
-                  Gap(AppLayout.getWidth(5)),
-                  Icon(
-                    FluentSystemIcons.ic_fluent_copy_regular,
-                    size: AppLayout.getHeight(15),
-                  ),
-                ],
-              ),
-            ],
-          )
         ],
       ),
     );
