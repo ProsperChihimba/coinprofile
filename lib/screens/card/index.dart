@@ -28,7 +28,7 @@ class _CardsScreenState extends State<CardsScreen> {
                   ),
 
                   // Header text
-                  Gap(AppLayout.getHeight(20)),
+                  // Gap(AppLayout.getHeight(20)),
                   Text(
                     "Create a virtual Dollar card",
                     style: Styles.headerText,

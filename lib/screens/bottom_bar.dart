@@ -1,6 +1,7 @@
 import 'package:coinprofile/screens/balance/index.dart';
 import 'package:coinprofile/screens/card/index.dart';
 import 'package:coinprofile/screens/home/index.dart';
+import 'package:coinprofile/screens/settings/index.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class _BottomBarState extends State<BottomBar> {
     const HomeScreen(),
     const BalanceScreen(),
     const CardsScreen(),
-    const Text("Settings"),
+    const SettingScreen(),
   ];
 
   void _onItemTapped(int index) {
