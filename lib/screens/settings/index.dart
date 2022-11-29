@@ -35,7 +35,20 @@ class _SettingScreenState extends State<SettingScreen> {
 
             // user profile
             Gap(AppLayout.getHeight(34)),
-            const ProfileSection()
+            const ProfileSection(),
+
+            Gap(AppLayout.getHeight(40)),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: AppLayout.getWidth(17),
+              ),
+              child: Container(
+                height: AppLayout.getHeight(1),
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade400,
+                ),
+              ),
+            )
           ],
         ),
       ),
