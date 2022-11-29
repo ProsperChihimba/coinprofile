@@ -1,4 +1,8 @@
+import 'package:coinprofile/screens/settings/profile.dart';
+import 'package:coinprofile/utils/app_layout.dart';
+import 'package:coinprofile/utils/app_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({super.key});
@@ -10,6 +14,31 @@ class SettingScreen extends StatefulWidget {
 class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: ListView(
+          children: [
+            // Screen desc
+            Gap(AppLayout.getHeight(18)),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: AppLayout.getWidth(17),
+              ),
+              child: Text(
+                "View your Personal Profile Information",
+                style: Styles.normalText.copyWith(
+                  color: Colors.grey.shade500,
+                ),
+              ),
+            ),
+
+            // user profile
+            Gap(AppLayout.getHeight(34)),
+            const ProfileSection()
+          ],
+        ),
+      ),
+    );
   }
 }
