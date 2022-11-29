@@ -20,15 +20,20 @@ class TransactionsSection extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          Gap(AppLayout.getHeight(10)),
-          Text(
-            "Your recent transaction activities show up here, but you haven’t done any transactions yet.",
-            style: Styles.normalText.copyWith(
-                fontSize: AppLayout.getHeight(13), color: Colors.grey.shade600),
+          Gap(AppLayout.getHeight(13)),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(10)),
+            child: Text(
+              "Your recent transaction activities show up here, but you haven’t done any transactions yet.",
+              textAlign: TextAlign.center,
+              style: Styles.normalText.copyWith(
+                  fontSize: AppLayout.getHeight(13),
+                  color: Colors.grey.shade600),
+            ),
           ),
 
           //
-          Gap(AppLayout.getHeight(10)),
+          Gap(AppLayout.getHeight(13)),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
