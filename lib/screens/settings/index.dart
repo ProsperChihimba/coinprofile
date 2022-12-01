@@ -1,3 +1,4 @@
+import 'package:coinprofile/screens/settings/input_fields.dart';
 import 'package:coinprofile/screens/settings/profile.dart';
 import 'package:coinprofile/utils/app_layout.dart';
 import 'package:coinprofile/utils/app_styles.dart';
@@ -48,7 +49,10 @@ class _SettingScreenState extends State<SettingScreen> {
                   color: Colors.grey.shade400,
                 ),
               ),
-            )
+            ),
+
+            Gap(AppLayout.getHeight(50)),
+            const InputFieds()
           ],
         ),
       ),
