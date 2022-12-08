@@ -1,8 +1,10 @@
+import 'package:coinprofile/screens/sendselection/index.dart';
 import 'package:coinprofile/utils/app_layout.dart';
 import 'package:coinprofile/utils/app_styles.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 
 class ActionButtonsSection extends StatelessWidget {
   const ActionButtonsSection({super.key});
@@ -20,7 +22,9 @@ class ActionButtonsSection extends StatelessWidget {
                 backgroundColor: Styles.blackColor,
                 padding:
                     EdgeInsets.symmetric(vertical: AppLayout.getHeight(11))),
-            onPressed: (() {}),
+            onPressed: (() {
+              Get.to(() => const SendMoneySelection());
+            }),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
