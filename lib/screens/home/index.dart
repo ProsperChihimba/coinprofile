@@ -3,6 +3,7 @@ import 'package:coinprofile/screens/home/customerRefers.dart';
 import 'package:coinprofile/screens/home/transaction_history.dart';
 import 'package:coinprofile/screens/parts/appBar.dart';
 import 'package:coinprofile/screens/parts/balance.dart';
+import 'package:coinprofile/screens/parts/drop_down.dart';
 import 'package:coinprofile/utils/app_layout.dart';
 import 'package:coinprofile/utils/app_styles.dart';
 import 'package:flutter/material.dart';
@@ -42,11 +43,16 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.symmetric(
                 horizontal: AppLayout.getWidth(17),
               ),
-              child: Text(
-                "Estimated Total balance in ",
-                style: Styles.normalText.copyWith(
-                  color: Colors.grey.shade400,
-                ),
+              child: Row(
+                children: [
+                  Text(
+                    "Estimated Total balance in ",
+                    style: Styles.normalText.copyWith(
+                      color: Colors.grey.shade400,
+                    ),
+                  ),
+                  const DropDownSection(),
+                ],
               ),
             ),
 

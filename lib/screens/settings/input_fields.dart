@@ -97,7 +97,10 @@ class InputFieds extends StatelessWidget {
             onPressed: (() {}),
             child: Text(
               "Save changes",
-              style: Styles.normalText.copyWith(color: Colors.white),
+              style: Styles.normalText.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
         ],

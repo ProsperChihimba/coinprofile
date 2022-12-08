@@ -64,11 +64,14 @@ class _CardsScreenState extends State<CardsScreen> {
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Styles.blackColor,
-                        padding: EdgeInsets.all(AppLayout.getHeight(5))),
+                        padding: EdgeInsets.all(AppLayout.getHeight(10))),
                     onPressed: (() {}),
                     child: Text(
                       "Verify identity",
-                      style: Styles.normalText.copyWith(color: Colors.white),
+                      style: Styles.normalText.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                 ],
