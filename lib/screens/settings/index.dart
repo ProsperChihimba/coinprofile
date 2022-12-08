@@ -1,3 +1,4 @@
+import 'package:coinprofile/screens/parts/drop_down.dart';
 import 'package:coinprofile/screens/settings/input_fields.dart';
 import 'package:coinprofile/screens/settings/profile.dart';
 import 'package:coinprofile/utils/app_layout.dart';
@@ -15,13 +16,33 @@ class SettingScreen extends StatefulWidget {
 class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
+    final size = AppLayout.getSize(context);
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
         child: ListView(
           children: [
-            // Screen desc
-            Gap(AppLayout.getHeight(18)),
+            Gap(AppLayout.getHeight(30)),
+            // Dropdown section
+            Padding(
+              padding: EdgeInsets.only(
+                left: AppLayout.getWidth(17),
+                right: size.width * 0.45,
+              ),
+              child: const DropDownSection(
+                list: [
+                  'Profile',
+                  'Security',
+                  'Verification',
+                  'API',
+                  'Communications',
+                  'Connect'
+                ],
+              ),
+            ),
+
+            // Page description
+            Gap(AppLayout.getHeight(40)),
             Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: AppLayout.getWidth(17),

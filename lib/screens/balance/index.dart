@@ -1,6 +1,7 @@
 import 'package:coinprofile/screens/balance/actionButtons.dart';
 import 'package:coinprofile/screens/balance/transactions.dart';
 import 'package:coinprofile/screens/parts/balance.dart';
+import 'package:coinprofile/screens/parts/drop_down.dart';
 import 'package:coinprofile/utils/app_layout.dart';
 import 'package:coinprofile/utils/app_styles.dart';
 import 'package:flutter/material.dart';
@@ -27,11 +28,19 @@ class _BalanceScreenState extends State<BalanceScreen> {
               padding: EdgeInsets.symmetric(
                 horizontal: AppLayout.getWidth(17),
               ),
-              child: Text(
-                "Nigerian Naira",
-                style: Styles.normalText.copyWith(
-                  color: Styles.blackColor,
-                ),
+              child: Row(
+                children: [
+                  Text(
+                    "Nigerian Naira",
+                    style: Styles.normalText.copyWith(
+                      color: Styles.blackColor,
+                    ),
+                  ),
+                  Gap(AppLayout.getWidth(10)),
+                  const DropDownSection(
+                    list: ['NGN', 'USD'],
+                  ),
+                ],
               ),
             ),
 
