@@ -1,4 +1,5 @@
 import 'package:coinprofile/screens/sendselection/app_bar.dart';
+import 'package:coinprofile/screens/sendtype/type_selection.dart';
 import 'package:coinprofile/utils/app_layout.dart';
 import 'package:coinprofile/utils/app_styles.dart';
 import 'package:flutter/material.dart';
@@ -40,6 +41,7 @@ class _SendOptionScreenState extends State<SendOptionScreen> {
 
             // Send money to selection
             Gap(AppLayout.getHeight(50)),
+            const SendMoneyToSelection(),
           ],
         ),
       ),
