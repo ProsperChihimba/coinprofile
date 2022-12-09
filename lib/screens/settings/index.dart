@@ -29,8 +29,8 @@ class _SettingScreenState extends State<SettingScreen> {
                 left: AppLayout.getWidth(17),
                 right: size.width * 0.45,
               ),
-              child: const DropDownSection(
-                list: [
+              child: DropDownSection(
+                list: const [
                   'Profile',
                   'Security',
                   'Verification',
@@ -38,6 +38,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   'Communications',
                   'Connect'
                 ],
+                bgColor: Colors.grey.shade200,
               ),
             ),
 

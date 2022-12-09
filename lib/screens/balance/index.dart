@@ -37,8 +37,9 @@ class _BalanceScreenState extends State<BalanceScreen> {
                     ),
                   ),
                   Gap(AppLayout.getWidth(10)),
-                  const DropDownSection(
-                    list: ['NGN', 'USD'],
+                  DropDownSection(
+                    list: const ['NGN', 'USD'],
+                    bgColor: Colors.grey.shade200,
                   ),
                 ],
               ),

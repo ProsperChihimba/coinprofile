@@ -51,8 +51,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.grey.shade400,
                     ),
                   ),
-                  const DropDownSection(
-                    list: ['NGN', 'USD'],
+                  DropDownSection(
+                    list: const ['NGN', 'USD'],
+                    bgColor: Colors.grey.shade200,
                   ),
                 ],
               ),

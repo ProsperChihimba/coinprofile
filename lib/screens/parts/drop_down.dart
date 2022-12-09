@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 class DropDownSection extends StatefulWidget {
   final List<String> list;
-  const DropDownSection({super.key, required this.list});
+  final Color bgColor;
+  const DropDownSection({super.key, required this.list, required this.bgColor});
 
   @override
   State<DropDownSection> createState() => _DropDownSectionState();
@@ -18,7 +19,7 @@ class _DropDownSectionState extends State<DropDownSection> {
       padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(8)),
       height: AppLayout.getHeight(30),
       decoration: BoxDecoration(
-        color: Colors.grey.shade200,
+        color: widget.bgColor,
         borderRadius: BorderRadius.circular(25),
       ),
       child: DropdownButton<String>(
