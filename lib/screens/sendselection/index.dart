@@ -1,3 +1,4 @@
+import 'package:coinprofile/screens/sendselection/selection.dart';
 import 'package:coinprofile/utils/app_layout.dart';
 import 'package:coinprofile/utils/app_styles.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +40,23 @@ class _SendMoneySelectionState extends State<SendMoneySelection> {
                   ],
                 ),
               ),
-            )
+            ),
+
+            // Page header description
+            Gap(AppLayout.getHeight(30)),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: AppLayout.getWidth(17),
+              ),
+              child: Text(
+                "Where are you sending money from?",
+                style: Styles.headerText,
+              ),
+            ),
+
+            // selection of sending money
+            Gap(AppLayout.getHeight(50)),
+            const PaymentSelection(),
           ],
         ),
       ),
