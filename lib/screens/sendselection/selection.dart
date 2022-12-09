@@ -39,7 +39,7 @@ class _PaymentSelectionState extends State<PaymentSelection> {
             ],
           ),
 
-          //
+          // second container
           Gap(AppLayout.getHeight(35)),
           Text(
             "Account or wallet outside Coinprofile",
