@@ -1,8 +1,10 @@
 import 'package:coinprofile/screens/parts/drop_down.dart';
+import 'package:coinprofile/screens/sendtype/index.dart';
 import 'package:coinprofile/utils/app_layout.dart';
 import 'package:coinprofile/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 
 class BalanceSelection extends StatefulWidget {
   const BalanceSelection({super.key});
@@ -73,7 +75,9 @@ class _BalanceSelectionState extends State<BalanceSelection> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Styles.blackColor,
                   ),
-                  onPressed: (() {}),
+                  onPressed: (() {
+                    Get.to(() => const SendOptionScreen());
+                  }),
                   child: Text(
                     "Next",
                     style: Styles.normalText.copyWith(
@@ -93,11 +97,12 @@ class InputStack extends StatelessWidget {
   final List<String> list;
   final String header;
   final String initialValue;
-  const InputStack(
-      {super.key,
-      required this.list,
-      required this.header,
-      required this.initialValue});
+  const InputStack({
+    super.key,
+    required this.list,
+    required this.header,
+    required this.initialValue,
+  });
 
   @override
   Widget build(BuildContext context) {
