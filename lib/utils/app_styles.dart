@@ -9,6 +9,7 @@ class Styles {
   static Color primaryColor = primary;
   static Color blackColor = const Color(0xFF000000);
   static Color grayColor = const Color(0xFFe4f2dc);
+  static Color bgGrey = const Color(0xFFf2eddc);
 
   // Basic app text styles
   static TextStyle normalText = GoogleFonts.poppins(

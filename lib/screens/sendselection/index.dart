@@ -1,3 +1,4 @@
+import 'package:coinprofile/screens/sendselection/app_bar.dart';
 import 'package:coinprofile/screens/sendselection/selection.dart';
 import 'package:coinprofile/utils/app_layout.dart';
 import 'package:coinprofile/utils/app_styles.dart';
@@ -16,31 +17,14 @@ class _SendMoneySelectionState extends State<SendMoneySelection> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFf2eddc),
+      backgroundColor: Styles.bgGrey,
       body: SafeArea(
         child: ListView(
           children: [
             Gap(AppLayout.getHeight(20)),
 
             // App bar
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(17)),
-              child: InkWell(
-                onTap: () {
-                  Get.back();
-                },
-                child: Row(
-                  children: [
-                    const Icon(Icons.arrow_back),
-                    Gap(AppLayout.getWidth(10)),
-                    Text(
-                      "Go back",
-                      style: Styles.headerTextTwo,
-                    )
-                  ],
-                ),
-              ),
-            ),
+            const AppBarSection(),
 
             // Page header description
             Gap(AppLayout.getHeight(30)),
